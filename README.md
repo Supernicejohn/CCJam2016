@@ -1,5 +1,5 @@
 # CCJam2016
-A random text editor, my most advanced project to date!
+Texty, a random text editor, my most advanced project to date!
 Features: (to date)
 basic text editing,
 save/load,
