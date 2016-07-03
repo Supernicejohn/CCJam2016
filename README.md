@@ -1,3 +1,3 @@
 # CCJam2016
-Ok, well that didn't work.
+Ok, kinda works, I'll fix it sometime tomorrow. GG
 
