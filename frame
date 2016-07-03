@@ -35,7 +35,7 @@ local function tT(x,y)
          a = a..y
       end
    else
-      errorLog:write(os.time().." Incorrect format at x:"..x.." y:"..y.."\n")
+      errorLog.write(os.time().." Incorrect format at x:"..x.." y:"..y.."\n")
    end
    return a
 end
@@ -147,7 +147,7 @@ function setCol(color)
       while y < MaxY + 1 do
          local x = 1
          while x < MaxX + 1 do
-            setc(x,y,color)
+            setc(x,y,tostring(color))
             x = x + 1
          end
          y = y + 1
@@ -214,7 +214,9 @@ function draw(x,y)
    else
       if setting.useColor then
          term.setCursorPos(x,y)
-         term.blit(t[A],c[A],b[A])
+         --if not t[A] == nil then
+            term.blit(tostring((t[A] or " ")),tostring(c[A]),tostring(b[A]))
+         --end
       else
          term.setCursorPos(x,y)
          write(t[A])
